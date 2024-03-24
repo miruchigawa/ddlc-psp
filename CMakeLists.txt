@@ -2,9 +2,10 @@ cmake_minimum_required(VERSION 3.22)
 
 project(ddlc)
 
-file(GLOB SOURCES src/**.c src/scene/**.c) 
-
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_executable(${PROJECT_NAME} 
+    src/main.c src/game.c 
+    src/scene/splash.c
+)
 add_subdirectory(./QuickGame QuickGame)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC QuickGame)

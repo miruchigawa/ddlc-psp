@@ -19,7 +19,7 @@ void init_splash() {
 
 void update_splash(double delta) {
     if (opacity < 255) {
-        opacity += 2 + ((unsigned int)delta);
+        opacity += 3 + ((unsigned int)delta);
     }
 
     if (opacity > 255) opacity = 255;

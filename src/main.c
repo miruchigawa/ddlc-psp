@@ -3,29 +3,29 @@
 #include "scene/splash.h"
 
 QGTimer time;
-Game game = {Splash};
 
-void init() {
+void init(void) {
     QuickGame_Timer_Start(&time);
     QuickGame_Graphics_Set2D();
+    Init_Game_Settings();
     init_splash();
 }
 
 void update(double delta) {
     QuickGame_Input_Update();
 
-    switch (game.state) {
+    switch (Get_Game_State()) {
     case Splash:
         update_splash(delta);
         break;
     }
 }
 
-void draw() {
+void draw(void) {
     QuickGame_Graphics_Start_Frame();
     QuickGame_Graphics_Clear();
     
-    switch (game.state) {
+    switch (Get_Game_State()) {
     case Splash:
         render_splash();
         break;
@@ -35,7 +35,7 @@ void draw() {
     QuickGame_Graphics_End_Frame(true);
 }
 
-int main() {
+int main(void) {
     QuickGame_Init();
     
     init(); 
