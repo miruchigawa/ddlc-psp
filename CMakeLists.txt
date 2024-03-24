@@ -4,7 +4,7 @@ project(ddlc)
 
 add_executable(${PROJECT_NAME} 
     src/main.c src/game.c 
-    src/scene/splash.c
+    src/scenes/splash.c
 )
 add_subdirectory(./QuickGame QuickGame)
 

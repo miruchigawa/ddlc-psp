@@ -1,6 +1,6 @@
 #include <QuickGame.h>
 #include "game.h"
-#include "scene/splash.h"
+#include "scenes/splash.h"
 
 QGTimer time;
 
